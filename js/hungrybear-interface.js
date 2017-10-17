@@ -14,7 +14,7 @@ $(document).ready(function(){
     $('#sleepButton').show();
     let name = window.prompt('Name your Hungry Bear');
     let bear = new HungryBear(name);
-    $('span#bearName').text(bear.name);
+    $('span#bearName').text(`${bear.name} the `);
 
     bear.setHunger();
     bear.setHappiness();
