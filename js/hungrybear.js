@@ -18,17 +18,17 @@ export class HungryBear {
   }
 
   setHunger() {
-    setInterval(() => {this.foodLevel--;
+    setInterval(() => {this.foodLevel -= 1;
     }, 1000);
   }
 
   setHappiness() {
-    setInterval(() => {this.playLevel--;
+    setInterval(() => {this.playLevel -= 1;
     }, 1000);
   }
 
   setTiredness() {
-    setInterval(() => {this.sleepLevel--;
+    setInterval(() => {this.sleepLevel  -= 1;
     }, 1000);
   }
 
@@ -41,14 +41,14 @@ export class HungryBear {
   // }
 
   feed(){
-    this.foodLevel = this.foodLevel += 1;
+    this.foodLevel += 1;
   }
 
   play(){
-    this.playLevel = this.playLevel += 1;
+    this.playLevel += 1;
   }
 
   sleep(){
-    this.sleepLevel= this.sleepLevel += 1;
+    this.sleepLevel += 1;
   }
 }

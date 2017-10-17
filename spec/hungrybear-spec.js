@@ -55,9 +55,18 @@ describe('HungryBear', function() {
   // });
 
   it('should have a food level of 11 if fed and no .tick', function() {
-    jasmine.clock().tick(1000);
+    fuzzy.feed();
+    expect(fuzzy.foodLevel).toEqual(11);
+  });
+
+  it('should have a play level of 11 if played and no .tick', function() {
     fuzzy.play();
-    expect(fuzzy.playLevel).toEqual(10);
+    expect(fuzzy.playLevel).toEqual(11);
+  });
+
+  it('should have a sleep level of 11 if slept and no .tick', function() {
+    fuzzy.sleep();
+    expect(fuzzy.sleepLevel).toEqual(11);
   });
 
   // it('should have a foodLevel of +1 if it is fed', function() {
