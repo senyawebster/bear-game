@@ -7,8 +7,6 @@ export class HungryBear {
     this.sleepLevel = 10;
   }
 
-  // add consideration for still being eaten if you feed Fuzzy after you got eaten, no born-again bear-feeders
-
   isAlive() {
     if (this.foodLevel < 1 || this.playLevel < 1 || this.sleepLevel < 1) {
       return false;
@@ -31,14 +29,6 @@ export class HungryBear {
     setInterval(() => {this.sleepLevel  -= 1;
     }, 1000);
   }
-
-  // didYouGetEaten() {
-  //   if (this.foodLevel > 0) {
-  //     return false;
-  //   } else {
-  //     return true;
-  //   }
-  // }
 
   feed(){
     this.foodLevel += 1;

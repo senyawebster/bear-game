@@ -29,11 +29,30 @@ $(document).ready(function(){
         clearInterval(countdown);
         $('#startButtonRow').show();
       }
+      if (bear.foodLevel < 10) {
+        $('#happyBear').hide();
+        $('#angryBear').show();
+        $('#scaredyBear').hide();
+        $('#sadBear').hide();
+      } else if (bear.playLevel < 10) {
+        $('#happyBear').hide();
+        $('#angryBear').hide();
+        $('#scaredyBear').hide();
+        $('#sadBear').show();
+      } else if (bear.sleepLevel < 10) {
+        $('#happyBear').hide();
+        $('#angryBear').hide();
+        $('#scaredyBear').show();
+        $('#sadBear').hide();
+      } else {
+        $('#happyBear').show();
+      }
     }, 1000);
 
     $('#foodButton').click(function(){
       bear.feed();
       $('span#foodLevel').text(bear.foodLevel);
+
     });
 
     $('#playButton').click(function(){
@@ -45,5 +64,9 @@ $(document).ready(function(){
       bear.sleep();
       $('span#sleepLevel').text(bear.sleepLevel);
     });
+
+
+
+
   });
 });

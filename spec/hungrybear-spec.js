@@ -49,11 +49,6 @@ describe('HungryBear', function() {
     expect(fuzzy.isAlive()).toEqual(false);
   });
 
-  // it('should get very hungry if 10 seconds pass without feeding', function() {
-  //   jasmine.clock().tick(10001);
-  //   expect(fuzzy.didYouGetEaten()).toEqual(true);
-  // });
-
   it('should have a food level of 11 if fed and no .tick', function() {
     fuzzy.feed();
     expect(fuzzy.foodLevel).toEqual(11);
